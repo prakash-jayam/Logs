@@ -1,0 +1,49 @@
+[38;5;6mkeycloak [38;5;5m22:57:11.50 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mkeycloak [38;5;5m22:57:11.50 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami keycloak container[0m
+[38;5;6mkeycloak [38;5;5m22:57:11.50 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mkeycloak [38;5;5m22:57:11.51 [0m[38;5;2mINFO [0m ==> Submit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[38;5;6mkeycloak [38;5;5m22:57:11.51 [0m[38;5;2mINFO [0m ==> Upgrade to Tanzu Application Catalog for production environments to access custom-configured and pre-packaged software components. Gain enhanced features, including Software Bill of Materials (SBOM), CVE scan result reports, and VEX documents. To learn more, visit [1mhttps://bitnami.com/enterprise[0m
+[38;5;6mkeycloak [38;5;5m22:57:11.51 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mkeycloak [38;5;5m22:57:11.52 [0m[38;5;2mINFO [0m ==> ** Starting keycloak setup **
+[38;5;6mkeycloak [38;5;5m22:57:11.53 [0m[38;5;2mINFO [0m ==> Validating settings in KEYCLOAK_* env vars...
+[38;5;6mkeycloak [38;5;5m22:57:11.54 [0m[38;5;2mINFO [0m ==> Trying to connect to PostgreSQL server keycloak-postgresql...
+[38;5;6mkeycloak [38;5;5m22:57:20.18 [0m[38;5;2mINFO [0m ==> Found PostgreSQL server listening at keycloak-postgresql:5432
+[38;5;6mkeycloak [38;5;5m22:57:20.19 [0m[38;5;2mINFO [0m ==> Configuring database settings
+[38;5;6mkeycloak [38;5;5m22:57:20.21 [0m[38;5;2mINFO [0m ==> Enabling statistics
+[38;5;6mkeycloak [38;5;5m22:57:20.21 [0m[38;5;2mINFO [0m ==> Enabling health endpoints
+[38;5;6mkeycloak [38;5;5m22:57:20.22 [0m[38;5;2mINFO [0m ==> Configuring http settings
+[38;5;6mkeycloak [38;5;5m22:57:20.23 [0m[38;5;2mINFO [0m ==> Configuring hostname settings
+[38;5;6mkeycloak [38;5;5m22:57:20.23 [0m[38;5;2mINFO [0m ==> Configuring cache count
+[38;5;6mkeycloak [38;5;5m22:57:20.24 [0m[38;5;2mINFO [0m ==> Configuring log level
+[38;5;6mkeycloak [38;5;5m22:57:20.25 [0m[38;5;2mINFO [0m ==> ** keycloak setup finished! **
+
+[38;5;6mkeycloak [38;5;5m22:57:20.26 [0m[38;5;2mINFO [0m ==> ** Starting keycloak **
+Appending additional Java properties to JAVA_OPTS
+Updating the configuration and installing your custom providers, if any. Please wait.
+2024-09-09 22:57:34,295 WARN  [org.key.services] (build-8) KC-SERVICES0047: metrics (org.jboss.aerogear.keycloak.metrics.MetricsEndpointFactory) is implementing the internal SPI realm-restapi-extension. This SPI is internal and may change without notice
+2024-09-09 22:57:36,799 WARN  [org.key.services] (build-8) KC-SERVICES0047: metrics-listener (org.jboss.aerogear.keycloak.metrics.MetricsEventListenerFactory) is implementing the internal SPI eventsListener. This SPI is internal and may change without notice
+2024-09-09 22:57:57,702 INFO  [io.qua.dep.QuarkusAugmentor] (main) Quarkus augmentation completed in 31512ms
+2024-09-09 22:58:11,400 INFO  [org.infinispan.CONTAINER] (Thread-5) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+2024-09-09 22:58:13,201 INFO  [org.infinispan.CLUSTER] (Thread-5) ISPN000078: Starting JGroups channel `ISPN` with stack `kubernetes`
+2024-09-09 22:58:13,203 INFO  [org.jgroups.JChannel] (Thread-5) local_addr: 9a556871-6c62-4a23-af0e-10328684a8ed, name: keycloak-0-14468
+2024-09-09 22:58:13,293 INFO  [org.jgroups.protocols.FD_SOCK2] (Thread-5) server listening on *.57800
+2024-09-09 22:58:15,392 INFO  [org.jgroups.protocols.pbcast.GMS] (Thread-5) keycloak-0-14468: no members discovered after 2004 ms: creating cluster as coordinator
+2024-09-09 22:58:15,403 INFO  [org.infinispan.CLUSTER] (Thread-5) ISPN000094: Received new cluster view for channel ISPN: [keycloak-0-14468|0] (1) [keycloak-0-14468]
+2024-09-09 22:58:15,491 INFO  [org.infinispan.CLUSTER] (Thread-5) ISPN000079: Channel `ISPN` local address is `keycloak-0-14468`, physical addresses are `[10.1.0.203:7800]`
+2024-09-09 22:58:16,904 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: keycloak-0-14468, Site name: null
+2024-09-09 22:58:20,207 INFO  [org.keycloak.quarkus.runtime.storage.legacy.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+
+UPDATE SUMMARY
+Run:                        134
+Previously run:               0
+Filtered out:                 0
+-------------------------------
+Total change sets:          134
+
+2024-09-09 22:58:32,106 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+2024-09-09 22:58:32,199 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+2024-09-09 22:58:42,391 INFO  [org.keycloak.services] (main) KC-SERVICES0009: Added user 'user' to realm 'master'
+2024-09-09 22:58:43,285 INFO  [io.quarkus] (main) Keycloak 25.0.2 on JVM (powered by Quarkus 3.8.5) started in 45.302s. Listening on: http://0.0.0.0:8080. Management interface listening on http://0.0.0.0:9000.
+2024-09-09 22:58:43,300 INFO  [io.quarkus] (main) Profile dev activated. 
+2024-09-09 22:58:43,300 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-postgresql, keycloak, logging-gelf, narayana-jta, reactive-routes, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, vertx]
+2024-09-09 22:58:43,380 WARN  [org.keycloak.quarkus.runtime.KeycloakMain] (main) Running the server in development mode. DO NOT use this configuration in production.

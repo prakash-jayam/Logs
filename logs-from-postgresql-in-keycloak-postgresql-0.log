@@ -1,0 +1,45 @@
+[38;5;6mpostgresql [38;5;5m22:57:10.69 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mpostgresql [38;5;5m22:57:10.69 [0m[38;5;2mINFO [0m ==> [1mWelcome to the Bitnami postgresql container[0m
+[38;5;6mpostgresql [38;5;5m22:57:10.69 [0m[38;5;2mINFO [0m ==> Subscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mpostgresql [38;5;5m22:57:10.70 [0m[38;5;2mINFO [0m ==> Submit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[38;5;6mpostgresql [38;5;5m22:57:10.78 [0m[38;5;2mINFO [0m ==> Upgrade to Tanzu Application Catalog for production environments to access custom-configured and pre-packaged software components. Gain enhanced features, including Software Bill of Materials (SBOM), CVE scan result reports, and VEX documents. To learn more, visit [1mhttps://bitnami.com/enterprise[0m
+[38;5;6mpostgresql [38;5;5m22:57:10.79 [0m[38;5;2mINFO [0m ==> 
+[38;5;6mpostgresql [38;5;5m22:57:10.99 [0m[38;5;2mINFO [0m ==> ** Starting PostgreSQL setup **
+[38;5;6mpostgresql [38;5;5m22:57:11.00 [0m[38;5;2mINFO [0m ==> Validating settings in POSTGRESQL_* env vars..
+[38;5;6mpostgresql [38;5;5m22:57:11.09 [0m[38;5;2mINFO [0m ==> Loading custom pre-init scripts...
+[38;5;6mpostgresql [38;5;5m22:57:11.18 [0m[38;5;2mINFO [0m ==> Initializing PostgreSQL database...
+[38;5;6mpostgresql [38;5;5m22:57:11.29 [0m[38;5;2mINFO [0m ==> pg_hba.conf file not detected. Generating it...
+[38;5;6mpostgresql [38;5;5m22:57:11.29 [0m[38;5;2mINFO [0m ==> Generating local authentication configuration
+[38;5;6mpostgresql [38;5;5m22:57:16.12 [0m[38;5;2mINFO [0m ==> Starting PostgreSQL in background...
+[38;5;6mpostgresql [38;5;5m22:57:16.61 [0m[38;5;2mINFO [0m ==> Changing password of postgres
+[38;5;6mpostgresql [38;5;5m22:57:16.78 [0m[38;5;2mINFO [0m ==> Creating user bn_keycloak
+[38;5;6mpostgresql [38;5;5m22:57:16.89 [0m[38;5;2mINFO [0m ==> Granting access to "bn_keycloak" to the database "bitnami_keycloak"
+[38;5;6mpostgresql [38;5;5m22:57:17.00 [0m[38;5;2mINFO [0m ==> Setting ownership for the 'public' schema database "bitnami_keycloak" to "bn_keycloak"
+[38;5;6mpostgresql [38;5;5m22:57:17.20 [0m[38;5;2mINFO [0m ==> Configuring replication parameters
+[38;5;6mpostgresql [38;5;5m22:57:17.48 [0m[38;5;2mINFO [0m ==> Configuring synchronous_replication
+[38;5;6mpostgresql [38;5;5m22:57:17.49 [0m[38;5;2mINFO [0m ==> Configuring fsync
+[38;5;6mpostgresql [38;5;5m22:57:17.79 [0m[38;5;2mINFO [0m ==> Stopping PostgreSQL...
+waiting for server to shut down.... done
+server stopped
+[38;5;6mpostgresql [38;5;5m22:57:18.09 [0m[38;5;2mINFO [0m ==> Loading custom scripts...
+[38;5;6mpostgresql [38;5;5m22:57:18.10 [0m[38;5;2mINFO [0m ==> Enabling remote connections
+[38;5;6mpostgresql [38;5;5m22:57:18.10 [0m[38;5;2mINFO [0m ==> ** PostgreSQL setup finished! **
+
+[38;5;6mpostgresql [38;5;5m22:57:18.19 [0m[38;5;2mINFO [0m ==> ** Starting PostgreSQL **
+2024-09-09 22:57:18.300 GMT [1] LOG:  pgaudit extension initialized
+2024-09-09 22:57:18.310 GMT [1] LOG:  starting PostgreSQL 16.3 on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit
+2024-09-09 22:57:18.310 GMT [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2024-09-09 22:57:18.310 GMT [1] LOG:  listening on IPv6 address "::", port 5432
+2024-09-09 22:57:18.396 GMT [1] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2024-09-09 22:57:18.409 GMT [153] LOG:  database system was shut down at 2024-09-09 22:57:18 GMT
+2024-09-09 22:57:18.427 GMT [1] LOG:  database system is ready to accept connections
+2024-09-09 22:58:16.918 GMT [225] ERROR:  relation "migration_model" does not exist at character 25
+2024-09-09 22:58:16.918 GMT [225] STATEMENT:  SELECT ID, VERSION FROM MIGRATION_MODEL ORDER BY UPDATE_TIME DESC
+2024-09-09 22:58:19.208 GMT [225] ERROR:  relation "public.databasechangelog" does not exist at character 22
+2024-09-09 22:58:19.208 GMT [225] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+2024-09-09 22:58:20.099 GMT [241] ERROR:  relation "public.databasechangeloglock" does not exist at character 22
+2024-09-09 22:58:20.099 GMT [241] STATEMENT:  SELECT COUNT(*) FROM public.databasechangeloglock
+2024-09-09 22:58:20.206 GMT [225] ERROR:  relation "public.databasechangelog" does not exist at character 22
+2024-09-09 22:58:20.206 GMT [225] STATEMENT:  SELECT COUNT(*) FROM public.databasechangelog
+2024-09-09 23:02:18.498 GMT [151] LOG:  checkpoint starting: time
+2024-09-09 23:03:14.091 GMT [151] LOG:  checkpoint complete: wrote 552 buffers (3.4%); 1 WAL file(s) added, 0 removed, 0 recycled; write=55.089 s, sync=0.116 s, total=55.594 s; sync files=573, longest=0.006 s, average=0.001 s; distance=3889 kB, estimate=3889 kB; lsn=0/1CDF078, redo lsn=0/1CDF040
